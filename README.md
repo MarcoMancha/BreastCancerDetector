@@ -1,5 +1,5 @@
 # BreastCancerDetector
-Breast Cancer Predictor using Decision Trees.
+Breast Cancer Predictor using Random Forests.
 
 # Data
 
