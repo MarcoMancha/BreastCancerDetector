@@ -55,3 +55,15 @@ y_pred = rf.predict(X_test)
 
 # Accuracy with test data
 print("Test Accuracy:",accuracy_score(y_test, y_pred))
+
+from sklearn.tree import export_graphviz
+
+# Select one of the trees to see structure
+estimator = rf.estimators_[0]
+
+# Export random forest in .dot format
+export_graphviz(estimator, out_file='tree.dot', 
+                feature_names = X.columns,
+                class_names = ["B","M"],
+                rounded = True, proportion = False, 
+                precision = 2, filled = True)
